@@ -1,0 +1,31 @@
+{
+  "name": "WWIIStats",
+  "version": "1.0.0",
+  "description": "Call of Duty WWII Stats Viewer - Playstation, Xbox Live and Steam.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "dist": "build --x64 --ia32",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "COD",
+    "WWII"
+  ],
+  "author": "Liam",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "electron": "^1.8.2-beta.2",
+    "electron-builder": "^19.46.4"
+  },
+  "build": {
+    "win": {
+      "target": "nsis",
+      "icon": "icon"
+    }
+  }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="WWII,World War 2,Call Of Duty,COD,Stats,API,WW2,ww2,wwii,Activision" /> 
+    <meta name="author" content="Liam" />
+    <meta name="description" content="Call of Duty WWII Stats Viewer - Playstation, Xbox Live and Steam." />
+    <title>Call of Duty WWII Stats Viewer</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+    <link href="styling.css"  rel="stylesheet"/>
+    <style>
+    .footer {
+        color: #fff;
+        background-color: #2d2d2d;
+        border-top: 1px solid #E7E7E7;
+        text-align:center;
+        padding:20px;
+        font-size: 8px !important;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 60px;
+        width: 100%;
+        z-index: 999;
+    }
+    </style>
+    </head>
+    <body id="dashboard">
+        <div class="main">
+        <div class="main_container">
+        <div class="layout1">
+         <div class="layout1_right_mobile">
+                <div  class="panel_blue">
+                    <h2>Overview</h2>
+                    <p>Here you can see your latest call of duty stats.</p>
+                    <p>To begin, just search for your gamertag and choose your platform.</p>
+                    <p>There is no Zombie Data at the Moment - Blame Sledgehammer.</p>
+                 </div>
+             <div  class="panel_red">
+                    <h2>Quick Note</h2>
+                    <p> The COD API does not update your statistics right away.</p>
+                    <p> It may take a couple of hours or even a day for stats to refresh.</p>
+                 </div>
+                  <div class="panel">
+                  <div class="panel_white">
+                     <h2>Game Statistics</h2>
+                      <label>Time Played: </label><span class="time color_pink" style="font-size: 14px;"></span><br />
+                      <label>Shop Points: </label><span class="codp color_pink" style="font-size: 14px;"></span><br />
+                      <label>Unlock Points: </label><span class="codu color_pink" style="font-size: 14px;"></span><br />
+                    </div>
+                </div>
+         </div>
+        <div class="layout1_left_mobile">
+           <div class="panel_white">
+                    <h2>View your WWII Stats</h2>
+                    <div class="input_container contain">
+                        <input type="text" class="gt"  placeholder="gamertag" style="width: 15vw"/>
+                        </div>
+                    <div class="input_container contain">
+                        <select class="platform" style="width: 15vw">
+                            <option value="psn">Playstation</option>
+                            <option value="xbl">Xbox Live</option>
+                            <option value="steam">Steam</option>
+                        </select>
+                    </div>
+                    <div class="input_container contain">
+                        <a class="connect_button connect_twitter" id="search">Search</a>
+                    </div>
+                 </div>
+                 <span class="loader"><span class="loader-inner"></span></span>
+            <h2 class="mp">Multiplayer</h2>
+            <div class="panel">
+                  <div class="panel_white">
+                              <div class="input_container contain">
+                                  <h2>KD Ratio</h2>
+                                  <span class="kdr" style="font-size: 26px;"></span>
+                              </div>
+                              <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Kills</h2>
+                                  <span class="kills" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Deaths</h2>
+                                  <span class="deaths" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Accuracy</h2>
+                                  <span class="acc" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Wins</h2>
+                                  <span class="wins" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Losses</h2>
+                                  <span class="loss" style="font-size: 26px;"></span>
+                                </div>
+                    </div>
+                </div>
+             <div class="panel">
+                  <div class="panel_white">
+                              <div class="input_container contain">
+                                  <h2>Rank</h2>
+                                  <span class="rank" style="font-size: 26px;"></span>
+                              </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>XP Earned</h2>
+                                  <span class="xper" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>XP Needed</h2>
+                                  <span class="xpne" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Total Rank XP</h2>
+                                  <span class="per" style="font-size: 26px;"></span>
+                                </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel_white">
+                              <div class="input_container contain">
+                                  <h2>Plants</h2>
+                                  <span class="plant" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Captures</h2>
+                                  <span class="capt" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Destructions</h2>
+                                  <span class="dest" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Played</h2>
+                                  <span class="matp" style="font-size: 26px;"></span>
+                                </div>
+                                  <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2>Completed</h2>
+                                  <span class="matc" style="font-size: 26px;"></span>
+                                </div>
+                  </div>
+                </div>
+                <div class="panel division">
+                  <h2>Weekly Division XP</h2>
+                  <div class="panel_white">
+                              <div class="input_container contain">
+                                  <h2 style="font-size: 16px;">Mountain XP</h2>
+                                  <span class="mou" style="font-size: 26px;"></span>
+                              </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2 style="font-size: 16px;">Expeditionary XP</h2>
+                                  <span class="exp" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2 style="font-size: 16px;">Infrantry XP</h2>
+                                  <span class="inf" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2 style="font-size: 16px;">Armored XP</h2>
+                                  <span class="arm" style="font-size: 26px;"></span>
+                                </div>
+                                <div class="input_container contain" style="margin-left: 2vw;">
+                                  <h2 style="font-size: 16px;">Airborne XP</h2>
+                                  <span class="air" style="font-size: 26px;"></span>
+                                </div>
+                  </div>
+                </div>
+                <div class="error"></div>
+                 </div>
+            </div>
+       </div>
+     </div>
+      <div class="footer">
+       ACTIVISION, CALL OF DUTY, CALL OF DUTY WWII and the CALL OF DUTY WORLD LEAGUE Logo are trademarks of Activision Publishing, Inc. All other trademarks and trade names are property of their respective owners. - &copy; 2017 Liam
+      </div>
+    <script src="stats.js"></script>
+    <script>
+        window.jquery = window.$ = require('jquery');
+        $('.panel').fadeOut();
+        $('.error').fadeOut();
+        $('.loader').fadeOut();
+        $('.mp').fadeOut();
+        $('#search').click(function () {
+            $('.panel').fadeOut();
+            $('.error').fadeOut();
+            $('.mp').fadeOut();
+            $('.loader').fadeIn();
+            setTimeout($('.loader').fadeOut(), 2500, getStats("wwii", $('.gt').val(), $('.platform').val()));
+        });
+    </script>
+</body>
+</html>
