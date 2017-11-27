@@ -1,0 +1,73 @@
+{
+  "status": "success",
+  "data": {
+    "bundles": [
+      {
+        "name": "LUA_MENU_MP_HACK_COMPLETE_MKII",
+        "startDate": "1511373600",
+        "endDate": "1511805600",
+        "purchaseLimit": 0,
+        "purchaseOptions": [
+          {
+            "name": "scrap",
+            "costs": {
+              "scrap": 1000
+            }
+          }
+        ]
+      },
+      {
+        "name": "LUA_MENU_MP_BUNDLE_FEASTANDBEAST",
+        "startDate": "1511373600",
+        "endDate": "1511805600",
+        "purchaseLimit": 0,
+        "purchaseOptions": [
+          {
+            "name": "keys",
+            "costs": {
+              "keys": 400
+            }
+          },
+          {
+            "name": "CODPoints",
+            "costs": {
+              "CODPoints": 2500
+            }
+          }
+        ]
+      }
+    ],
+    "crates": [
+      {
+        "name": "CommonCrate",
+        "label": "Common Supply Drop",
+        "purchaseOptions": [
+          {
+            "name": "keys",
+            "costs": {
+              "keys": 10
+            }
+          }
+        ]
+      },
+      {
+        "name": "EnlistedCrate",
+        "label": "Rare Supply Drop",
+        "purchaseOptions": [
+          {
+            "name": "keys",
+            "costs": {
+              "keys": 30
+            }
+          },
+          {
+            "name": "CODPoints",
+            "costs": {
+              "CODPoints": 200
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
