@@ -1,8 +1,8 @@
-version: 1.1.1
+version: 1.1.2
 files:
-  - url: WWIIStats-Setup-1.1.1.exe
-    sha512: Mw94FaTIWjnzBS8R6GFT8Xze3KAmPxAWUx4eVXZo7YRKI+AOw2p4okLNwGqcPQNGSqIszWUaKGN5JaortwPt3A==
-path: WWIIStats-Setup-1.1.1.exe
-sha512: Mw94FaTIWjnzBS8R6GFT8Xze3KAmPxAWUx4eVXZo7YRKI+AOw2p4okLNwGqcPQNGSqIszWUaKGN5JaortwPt3A==
-sha2: 6dfe62bb2f1b8e02744c0cb4760ee1eaa54be1f7d1f6ea7cb17b503a7fd71f2f
-releaseDate: '2017-12-01T17:59:31.170Z'
+  - url: WWIIStats-Setup-1.1.2.exe
+    sha512: TIdCxmXw7U2PcnV6NCwtp4OK9M4K/WxlKjmORohG4LTZ4yCCwIiwA+05+vNvqgcEAbwRIWyHT8090paoCxBIjA==
+path: WWIIStats-Setup-1.1.2.exe
+sha512: TIdCxmXw7U2PcnV6NCwtp4OK9M4K/WxlKjmORohG4LTZ4yCCwIiwA+05+vNvqgcEAbwRIWyHT8090paoCxBIjA==
+sha2: d9648244af5a726df9205d343e6d719b077eb18cb3ca20ad3379f869c86af957
+releaseDate: '2017-12-01T20:09:18.916Z'
