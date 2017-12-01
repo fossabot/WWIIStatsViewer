@@ -194,6 +194,12 @@
 		<script src="stats.js">
 		</script> 
 		<script>
+						// Import the Nucleus Library
+						const Nucleus = require('electron-nucleus');
+
+						// Init the analytics with your app id
+						Nucleus.init('5a217584fd2a27796bfc9351', true);
+						Nucleus.track("Opened");
 		                var page = 1;
 		                window.jquery = window.$ = require('jquery');
 		                $('.panel').fadeOut();

@@ -1,6 +1,6 @@
 const electron = require('electron');
 const { app, BrowserWindow, globalShortcut } = electron;
-
+const analytics = require("./analytics");
 let win;
 
 app.on('ready', function() {
