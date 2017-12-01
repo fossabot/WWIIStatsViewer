@@ -17,11 +17,12 @@
   "license": "ISC",
   "dependencies": {
     "electron-nucleus": "^0.2.0",
+    "fs": "0.0.1-security",
     "jquery": "^3.2.1",
     "request": "^2.83.0"
   },
   "devDependencies": {
-    "electron": "^1.7.9",
+    "electron": "^1.6.5",
     "electron-builder": "^19.46.4"
   },
   "build": {
