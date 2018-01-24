@@ -6,7 +6,9 @@
   "scripts": {
     "start": "electron index.js",
     "dist": "build --win",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icon.icns --prune=true --out=release-builds",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dmg": "electron-installer-dmg ./release-builds/WWIIStats-darwin-x64 tutorial\ WWIIStats-darwin-x64/Electron\ tutorial\ app.app electron-tutorial-app --out=release-builds --overwrite --icon=icon.icns"
   },
   "keywords": [
     "COD",
@@ -17,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "electron-nucleus": "^0.2.0",
+    "electron-packager": "^10.1.1",
     "fs": "0.0.1-security",
     "jquery": "^3.2.1",
     "request": "^2.83.0"
