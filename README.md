@@ -6,5 +6,5 @@ Stats Viewer For Call of Duty WWII - Playstation, XBOX and Steam.
 
 
 # Download
-
-Windows: https://github.com/ImNotLiam/WWIIStatsViewer/releases
+Windows and Mac
+https://github.com/ImNotLiam/WWIIStatsViewer/releases
